@@ -1,4 +1,9 @@
-/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #046ab3;
   --secondary-color: #008b9e;
@@ -14,12 +19,6 @@
   --transition: all 0.3s ease;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -33,7 +32,7 @@ body {
   min-height: 100vh;
 }
 
-/* Header/Hero Section */
+
 .hero {
   background: #f4f4f4;
   color: var(--black);
@@ -51,13 +50,13 @@ body {
 }
 
 .logo {
-  width: 200px;
+  width: 220px;
   height: auto;
   margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -66,8 +65,6 @@ body {
   font-size: 1.25rem;
   opacity: 0.9;
 }
-
-
 
 .cta-button:hover {
   transform: translateY(-3px);
@@ -103,6 +100,10 @@ body {
   background-color: var(--accent-color);
 }
 
+.team-title:after {
+  background-color: var(--white);
+}
+
 .section-subtitle {
   font-size: 1.1rem;
   margin-bottom: 2rem;
@@ -112,6 +113,35 @@ body {
 /* Team Section */
 .team-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Team Cards */
+.avatar-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.person-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.role {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 /* Tools Section */
@@ -150,57 +180,8 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Team Cards */
-.avatar-wrapper {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  padding: 10px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-}
 
-.avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
 
-.person-name {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  color: var(--black);
-}
-
-.role {
-  color: var(--gray);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.social-links a {
-  color: var(--primary-color);
-  background: rgba(67, 97, 238, 0.1);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.social-links a:hover {
-  background: var(--primary-color);
-  color: var(--white);
-}
 
 /* Tool Cards */
 .tool-card {
@@ -208,17 +189,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--white);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
 }
 
 .tool-wrapper {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  border: 2px solid linear-gradient(135deg, var(--primary-color), var(--accent-color));
+
 }
 
 .tool-logo {
@@ -300,7 +279,7 @@ body {
 
 .footer-logo {
   width: 120px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .mascot {
@@ -370,7 +349,7 @@ body {
   flex-wrap: wrap;
   gap: 3rem;
   max-width: 800px;
-  margin: 2rem auto 0;
+  margin: 6rem auto 0;
 }
 
 .mascote-image {
@@ -395,47 +374,4 @@ body {
   color: var(--gray);
   font-size: 1.1rem;
   line-height: 1.6;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .mascote-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .mascote-description {
-    text-align: center;
-  }
-  
-  .mascote-image {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero {
-    padding: 3rem 1rem;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .section {
-    padding: 3rem 1rem;
-  }
-  
-  .grid {
-    grid-template-columns: 1fr;
-  }
-  
-  
-  .button {
-    width: 100%;
-    max-width: 250px;
-    margin-bottom: 1rem;
-  }
 }

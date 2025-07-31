@@ -33,7 +33,7 @@ function App() {
         <div className="hero-content">
           <img src={bflash} alt="BFlash Logo" className="logo" />
           <h1>Plataforma para transcrever reuniões</h1>
-          <p className="hero-subtitle">Chega de anotações manuais e informações perdidas. Com nossa plataforma de transcrição automática, você converte reuniões, entrevistas e conversas em textos organizados, pesquisáveis e prontos para compartilhar — tudo em poucos minutos.</p>
+          <p className="hero-subtitle">Chega de informações perdidas. Com a nossa plataforma de transcrição automática, você converte reuniões em textos organizados — tudo em poucos minutos.</p>
         </div>
       </header>
 
@@ -55,7 +55,7 @@ function App() {
 
       <section className="section team-section">
         <div className="section-content">
-          <h2 className="section-title">Nosso Time</h2>
+          <h2 className="section-title team-title">Nosso Time</h2>
           <p className="section-subtitle">Conheça os talentos por trás do BFlash</p>
           <div className="grid">
             {team.map((person) => (
@@ -77,7 +77,7 @@ function App() {
           <p className="section-subtitle">Ferramentas modernas que construímos nossa aplicação</p>
           <div className="grid">
             {tools.map((tool) => (
-              <div className="card tool-card" key={tool.name}>
+              <div className="tool-card" key={tool.name}>
                 <div className="tool-wrapper">
                   <img src={tool.img} alt={tool.name} className="tool-logo" />
                 </div>
@@ -104,8 +104,7 @@ function App() {
 
       <section className="section cta-section">
         <div className="cta-content">
-          <h2>Pronto para começar?</h2>
-          <p>Entenda como nosso projeto foi feito</p>
+          <h2>Entenda como nosso projeto foi feito</h2>
           <div className="cta-buttons">
             <a href="/docs/intro" className="button primary">Ver Documentação</a>
           </div>
