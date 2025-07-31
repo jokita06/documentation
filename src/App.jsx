@@ -128,6 +128,7 @@ function App() {
               href={documentation}
               className="button primary"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Ver Documentação
             </a>
