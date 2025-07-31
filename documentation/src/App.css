@@ -90,17 +90,17 @@ body {
   color: var(--white);
   position: relative;
   display: inline-block;
+  padding-right: 20px; /* Add some padding to prevent text from touching the line */
 }
 
 .section-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 17%;
-  transform: translateX(-50%);
+  left: 0; /* Changed from left: 50% to right: 0 */
   width: 60px;
   height: 3px;
-  background-color: var(--white);
+  background-color: var(--accent-color);
 }
 
 .section-subtitle {
@@ -311,6 +311,107 @@ body {
 .copyright {
   opacity: 0.7;
   font-size: 0.9rem;
+}
+
+/* Add these new styles to your App.css */
+
+/* Video Pitch Section */
+.video-pitch-section {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.video-pitch-section .section-title {
+  color: var(--dark-color);
+}
+
+.video-pitch-section .section-title::after {
+  background-color: var(--accent-color);
+}
+
+.video-pitch-section .section-subtitle {
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.video-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pitch-video {
+  width: 100%;
+  display: block;
+  background-color: #000;
+}
+
+/* Mascote Section */
+.mascote-section {
+  background-color: var(--white);
+}
+
+.mascote-section .section-title,
+.mascote-section .section-subtitle {
+  color: var(--black);
+}
+
+.mascote-section .section-title::after {
+  background-color: var(--primary-color);
+}
+
+.mascote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.mascote-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.mascote-description {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.mascote-description h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.mascote-description p {
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mascote-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mascote-description {
+    text-align: center;
+  }
+  
+  .mascote-image {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* Responsive Adjustments */

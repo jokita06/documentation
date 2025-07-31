@@ -3,11 +3,14 @@ import './App.css';
 import css from './assets/tools/css.png';
 import html from './assets/tools/html.png';
 import js from './assets/tools/js.png';
+import django from './assets/tools/django.png';
 import geovanna from './assets/team/geovanna.jpg';
 import joyce from './assets/team/joyce.jpg';
 import pedro from './assets/team/pedro.jpg';
 import rafaela from './assets/team/rafaela.jpg';
 import bflash from './assets/bflash_logo.svg';
+import pitch from './assets/videos/pitch.mp4';
+import mascote from './assets/mascot/mascot.png'; // Assuming you'll add a mascote image
 
 function App() {
   const team = [
@@ -21,7 +24,7 @@ function App() {
     { name: 'HTML', img: html },
     { name: 'CSS', img: css },
     { name: 'JavaScript', img: js },
-    { name: 'Django', img: '/assets/tools/django.png' },
+    { name: 'Django', img: django },
   ];
 
   return (
@@ -30,9 +33,25 @@ function App() {
         <div className="hero-content">
           <img src={bflash} alt="BFlash Logo" className="logo" />
           <h1>Plataforma para transcrever reuniões</h1>
-          <p className="hero-subtitle">Transforme suas reuniões em conteúdo acionável com nossa solução de transcrição inteligente</p>
+          <p className="hero-subtitle">Transforme suas reuniões em conteúdo de fácil leitura com nossa solução de transcrição inteligente</p>
         </div>
       </header>
+
+      <section className="video-pitch-section">
+        <div className="section-content">
+          <div>
+            <h2 className="section-title">Conheça o BFlash</h2>
+            <p className="section-subtitle">Assista ao nosso vídeo pitch e descubra como podemos transformar suas reuniões</p>
+          </div>
+         
+          <div className="video-container">
+            <video controls className="pitch-video">
+              <source src={pitch} type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        </div>
+      </section>
 
       <section className="section team-section">
         <div className="section-content">
@@ -55,7 +74,7 @@ function App() {
       <section className="section tools-section">
         <div className="section-content">
           <h2 className="section-title">Tecnologias Utilizadas</h2>
-          <p className="section-subtitle">Ferramentas modernas para soluções inovadoras</p>
+          <p className="section-subtitle">Ferramentas modernas que construímos nossa aplicação</p>
           <div className="grid">
             {tools.map((tool) => (
               <div className="card tool-card" key={tool.name}>
@@ -69,10 +88,17 @@ function App() {
         </div>
       </section>
 
-      <section className="section mascot">
+      <section className="section mascote-section">
         <div className="section-content">
-          <h2 className="section-content">Mascote</h2>
-          <p className="section-subtitle">Conheça o mascote do BFlash</p>
+          <h2 className="section-title">Nosso mascote</h2>
+          <p className="section-subtitle">Conheça o rostinho simpático que representa nosso projeto</p>
+          <div className="mascote-container">
+            <img src={mascote} alt="Mascote BFlash" className="mascote-image" />
+            <div className="mascote-description">
+              <h3>Ray</h3>
+              <p>Nosso mascote representa a velocidade e eficiência com que nossa plataforma transforma áudio em texto.</p>
+            </div>
+          </div>
         </div>
       </section>
 
