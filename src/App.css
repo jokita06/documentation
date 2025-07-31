@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +9,14 @@
 :root {
   --primary-color: #046ab3;
   --secondary-color: #008b9e;
-  --accent-color: #4895ef;
   --dark-color: #1a1a2e;
   --light-color: #f8f9fa;
   --white: #ffffff;
   --black: #333333;
   --gray: #6c757d;
-  --success: #4bb543;
-  --error: #ff3333;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --gradiente: linear-gradient(to bottom, #046ab3, #008b9e);
 }
 
 body {
@@ -25,13 +25,6 @@ body {
   color: var(--black);
   background-color: var(--light-color);
 }
-
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 
 .hero {
   background: #f4f4f4;
@@ -50,58 +43,39 @@ body {
 }
 
 .logo {
-  width: 220px;
+  width: 200px;
   height: auto;
   margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   opacity: 0.9;
 }
 
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Sections */
 .section {
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
 }
 
 .section-content {
-  max-width: 1200px;
+  padding: 1.5rem;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
   color: var(--white);
   position: relative;
   display: inline-block;
-  padding-right: 20px; /* Add some padding to prevent text from touching the line */
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0; /* Changed from left: 50% to right: 0 */
-  width: 60px;
-  height: 3px;
-  background-color: var(--accent-color);
-}
-
-.team-title:after {
-  background-color: var(--white);
+  padding-right: 20px; 
 }
 
 .section-subtitle {
@@ -110,15 +84,13 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Team Section */
 .team-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
-/* Team Cards */
 .avatar-wrapper {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   padding: 5px;
@@ -144,7 +116,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Tools Section */
 .tools-section {
   background-color: var(--white);
 }
@@ -154,34 +125,31 @@ body {
   color: var(--black);
 }
 
-.tools-section .section-title::after {
-  background-color: var(--primary-color);
-}
-
-/* Grid & Cards */
-.grid {
+.grid-tool {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  margin-top: 2rem; 
+}
+
+.grid-team {
+  display: flex;
+  gap: 2rem;
   margin-top: 2rem;
+  max-width: 100vw;
 }
 
 .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background: var(--white);
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 5px;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
-  padding: 1.5rem;
+  padding: 1.4rem;
 }
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-
 
 /* Tool Cards */
 .tool-card {
@@ -189,15 +157,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
   border-radius: 50%;
+  border-color: 5px solid var(--black);
   width: 170px;
   height: 170px;
-}
-
-.tool-wrapper {
-
 }
 
 .tool-logo {
@@ -259,12 +223,6 @@ body {
   border: 2px solid var(--white);
 }
 
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
 .footer {
   background-color: #f4f4f4;
   color: var(--black);
@@ -286,15 +244,11 @@ body {
   background-color: var(--white);
 }
 
-
 .copyright {
   opacity: 0.7;
   font-size: 0.9rem;
 }
 
-/* Add these new styles to your App.css */
-
-/* Video Pitch Section */
 .video-pitch-section {
   padding: 4rem 2rem;
   background-color: #f8f9fa;
@@ -302,11 +256,7 @@ body {
 }
 
 .video-pitch-section .section-title {
-  color: var(--dark-color);
-}
-
-.video-pitch-section .section-title::after {
-  background-color: var(--accent-color);
+  color: var(--black);
 }
 
 .video-pitch-section .section-subtitle {
@@ -338,9 +288,6 @@ body {
   color: var(--black);
 }
 
-.mascote-section .section-title::after {
-  background-color: var(--primary-color);
-}
 
 .mascote-container {
   display: flex;
@@ -353,8 +300,8 @@ body {
 }
 
 .mascote-image {
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   object-fit: contain;
 }
 
@@ -375,3 +322,142 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+.tool-card {
+  position: relative;
+  border: 6px solid transparent;
+  background-image: var(--gradiente);
+  background-origin: border-box;
+  background-clip: border-box;      
+  -webkit-background-clip: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-image: 
+    linear-gradient(white, white),  
+    var(--gradiente);             
+}
+
+
+@media (max-width: 748px) {
+
+  body {
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .hero h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .role {
+    font-size: 0.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .avatar-wrapper {
+    width: 130px;
+    height: 130px;
+  }
+
+  .tool-card {
+    width: 140px;
+    height: 140px;
+    
+  }
+
+  .tool-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+
+  .button {
+    max-width: 200px;
+  }
+
+  .mascote-image {
+    width: 210px;
+    height: 210px;
+  }
+
+  .mascote-description h3 {
+    font-size: 1.2rem;
+  }
+
+  .mascote-description p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 1rem 1rem;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+
+  .card {
+    border-radius: 5px;
+    padding: 1rem;
+    width: 220px;
+  }
+
+  .grid {
+      justify-items: center;
+    }
+
+  .person-name {
+    margin: 0 auto;
+  }
+
+  .section-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .grid-team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .section-title,.section-subtitle,h2{
+    text-align: center;
+    padding: 0;
+  }
+
+  .grid-tool{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+} 

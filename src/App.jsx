@@ -6,18 +6,21 @@ import js from './assets/tools/js.png';
 import django from './assets/tools/django.png';
 import geovanna from './assets/team/geovanna.jpg';
 import joyce from './assets/team/joyce.jpg';
+import gabriel from './assets/team/gabriel.jpeg';
 import pedro from './assets/team/pedro.jpg';
-import rafaela from './assets/team/rafaela.jpg';
+import raphaela from './assets/team/raphaela.jpg';
 import bflash from './assets/bflash_logo.svg';
 import pitch from './assets/videos/pitch.mp4';
-import mascote from './assets/mascot/mascot.png'; // Assuming you'll add a mascote image
+import mascote from './assets/mascot/mascot.png'; 
+import documentation from './assets/documentation/Bflash.pdf'
 
 function App() {
   const team = [
     { name: 'Geovanna', role: 'UX/UI Designer', img: geovanna },
     { name: 'Joyce', role: 'Desenvolvedora Front-end', img: joyce },
+    { name: 'Gabriel', role: 'Desenvolvedor Back-end', img: gabriel },
     { name: 'Pedro', role: 'Desenvolvedor Back-end', img: pedro },
-    { name: 'Rafaela', role: 'Desenvolvedora Front-end', img: rafaela },
+    { name: 'Raphaela', role: 'Desenvolvedora Front-end', img: raphaela },
   ];
 
   const tools = [
@@ -57,14 +60,17 @@ function App() {
         <div className="section-content">
           <h2 className="section-title team-title">Nosso Time</h2>
           <p className="section-subtitle">Conheça os talentos por trás do BFlash</p>
-          <div className="grid">
+          <div className="grid-team">
             {team.map((person) => (
               <div className="card" key={person.name}>
                 <div className="avatar-wrapper">
                   <img src={person.img} alt={person.name} className="avatar" />
                 </div>
-                <h3 className="person-name">{person.name}</h3>
-                <p className="role">{person.role}</p>
+                
+                <div className='info-avatar'>
+                  <h3 className="person-name">{person.name}</h3>
+                  <p className="role">{person.role}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -75,7 +81,7 @@ function App() {
         <div className="section-content">
           <h2 className="section-title">Tecnologias Utilizadas</h2>
           <p className="section-subtitle">Ferramentas modernas que construímos nossa aplicação</p>
-          <div className="grid">
+          <div className="grid-tool">
             {tools.map((tool) => (
               <div className="tool-card" key={tool.name}>
                 <div className="tool-wrapper">
@@ -96,7 +102,7 @@ function App() {
             <img src={mascote} alt="Mascote BFlash" className="mascote-image" />
             <div className="mascote-description">
               <h3>Ray</h3>
-              <p>Nosso mascote representa a velocidade e eficiência com que nossa plataforma transforma áudio em texto.</p>
+              <p>Nosso mascote representa a velocidade e eficiência com que nossa plataforma de transcrição.</p>
             </div>
           </div>
         </div>
@@ -106,10 +112,17 @@ function App() {
         <div className="cta-content">
           <h2>Entenda como nosso projeto foi feito</h2>
           <div className="cta-buttons">
-            <a href="/docs/intro" className="button primary">Ver Documentação</a>
+            <a
+              href={documentation}
+              className="button primary"
+              target="_blank"
+            >
+              Ver Documentação
+            </a>
           </div>
         </div>
       </section>
+
 
       <footer className="footer">
         <div className="footer-content">
