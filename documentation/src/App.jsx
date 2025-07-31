@@ -33,7 +33,7 @@ function App() {
         <div className="hero-content">
           <img src={bflash} alt="BFlash Logo" className="logo" />
           <h1>Plataforma para transcrever reuniões</h1>
-          <p className="hero-subtitle">Transforme suas reuniões em conteúdo de fácil leitura com nossa solução de transcrição inteligente</p>
+          <p className="hero-subtitle">Chega de anotações manuais e informações perdidas. Com nossa plataforma de transcrição automática, você converte reuniões, entrevistas e conversas em textos organizados, pesquisáveis e prontos para compartilhar — tudo em poucos minutos.</p>
         </div>
       </header>
 
@@ -56,7 +56,7 @@ function App() {
       <section className="section team-section">
         <div className="section-content">
           <h2 className="section-title">Nosso Time</h2>
-          <p className="section-subtitle">Conheça os talentos profissionais por trás do BFlash</p>
+          <p className="section-subtitle">Conheça os talentos por trás do BFlash</p>
           <div className="grid">
             {team.map((person) => (
               <div className="card" key={person.name}>
