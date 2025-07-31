@@ -19,9 +19,6 @@ import bflash from '../public/bflash_logo.svg';
 import pitch from '../public/videos/pitch.mp4';
 import mascote from '../public/mascot/mascot.png'; 
 
-// documentation
-import documentation from '../public/documentation/Bflash.pdf'
-
 function App() {
   const team = [
     { name: 'Geovanna', role: 'UX/UI Designer', img: geovanna },
@@ -125,7 +122,7 @@ function App() {
           <h2>Entenda como nosso projeto foi feito</h2>
           <div className="cta-buttons">
             <a
-              href={documentation}
+              href="/documentation/Bflash.pdf"
               className="button primary"
               target="_blank"
               rel="noopener noreferrer"
