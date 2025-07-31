@@ -59,14 +59,13 @@ body {
   opacity: 0.9;
 }
 
-.section {
-  padding: 4rem 0rem;
-}
+/* Sections config */
 
-.section-content {
-  padding: 1.5rem;
-  max-width: 100vw;
-  margin: 0 auto;
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0rem;
+  align-items: center;
 }
 
 .section-title {
@@ -75,7 +74,6 @@ body {
   color: var(--white);
   position: relative;
   display: inline-block;
-  padding-right: 20px; 
 }
 
 .section-subtitle {
@@ -84,17 +82,17 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* team section */
+
 .team-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 .avatar-wrapper {
-  width: 190px;
-  height: 190px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
-  padding: 5px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 .avatar {
@@ -116,6 +114,25 @@ body {
   margin-bottom: 1rem;
 }
 
+.content-team {
+  width: 95%;
+}
+
+.team-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  padding: 1.1rem;
+  text-align: center;
+}
+
+/* tools section */
+
 .tools-section {
   background-color: var(--white);
 }
@@ -125,39 +142,26 @@ body {
   color: var(--black);
 }
 
-.grid-tool {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem; 
-}
-
-.grid-team {
+.container-tool {
   display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-  max-width: 100vw;
+  flex-direction: row;
+  gap: 3.5rem;
 }
 
-.card {
+.container-team {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: var(--white);
-  border-radius: 5px;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-  padding: 1.4rem;
+  gap: 1.5rem;
 }
 
-/* Tool Cards */
+.content-tools {
+  width: 70%;
+}
+
 .tool-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
   border-radius: 50%;
   border-color: 5px solid var(--black);
   width: 170px;
@@ -175,7 +179,8 @@ body {
   color: var(--black);
 }
 
-/* CTA Section */
+/* documentation section */
+
 .cta-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   text-align: center;
@@ -205,7 +210,7 @@ body {
 }
 
 .button {
-  padding: 0.8rem 1.8rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
@@ -279,6 +284,7 @@ body {
 }
 
 /* Mascote Section */
+
 .mascote-section {
   background-color: var(--white);
 }
@@ -293,10 +299,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 3rem;
   max-width: 800px;
-  margin: 6rem auto 0;
+  margin: 1rem auto 0;
 }
 
 .mascote-image {
@@ -388,7 +394,7 @@ body {
   }
 
   .cta-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 
   .cta-section p {
@@ -406,10 +412,16 @@ body {
 
   .mascote-description h3 {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   .mascote-description p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .mascote-container {
+    flex-direction: column;
   }
 
   .footer {
@@ -417,47 +429,28 @@ body {
   }
 
   .footer-logo {
-    width: 100px;
+    width: 80px;
   }
-
-  .card {
-    border-radius: 5px;
-    padding: 1rem;
-    width: 220px;
-  }
-
-  .grid {
-      justify-items: center;
-    }
 
   .person-name {
     margin: 0 auto;
   }
 
-  .section-content{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .grid-team{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-  }
-
-  .section-title,.section-subtitle,h2{
+  .content-team, .content-tools {
     text-align: center;
-    padding: 0;
+    width: 85%;
   }
 
-  .grid-tool{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .container-team{
     flex-direction: column;
   }
+
+  .container-tool {
+    flex-direction: column;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+  }
+
 } 

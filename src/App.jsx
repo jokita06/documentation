@@ -1,18 +1,26 @@
 import React from 'react';
 import './App.css';
-import css from './assets/tools/css.png';
-import html from './assets/tools/html.png';
-import js from './assets/tools/js.png';
-import django from './assets/tools/django.png';
-import geovanna from './assets/team/geovanna.jpg';
-import joyce from './assets/team/joyce.jpg';
-import gabriel from './assets/team/gabriel.jpeg';
-import pedro from './assets/team/pedro.jpg';
-import raphaela from './assets/team/raphaela.jpg';
-import bflash from './assets/bflash_logo.svg';
-import pitch from './assets/videos/pitch.mp4';
-import mascote from './assets/mascot/mascot.png'; 
-import documentation from './assets/documentation/Bflash.pdf'
+
+// tools
+import css from '../public/tools/css.png';
+import html from '../public/tools/html.png';
+import js from '../public/tools/js.png';
+import django from '../public/tools/django.png';
+
+// team
+import geovanna from '../public/team/geovanna.jpg';
+import joyce from '../public/team/joyce.jpg';
+import gabriel from '../public/team/gabriel.jpeg';
+import pedro from '../public/team/pedro.jpg';
+import raphaela from '../public/team/raphaela.jpg';
+
+// elements
+import bflash from '../public/bflash_logo.svg';
+import pitch from '../public/videos/pitch.mp4';
+import mascote from '../public/mascot/mascot.png'; 
+
+// documentation
+import documentation from '../public/documentation/Bflash.pdf'
 
 function App() {
   const team = [
@@ -57,12 +65,14 @@ function App() {
       </section>
 
       <section className="section team-section">
-        <div className="section-content">
-          <h2 className="section-title team-title">Nosso Time</h2>
-          <p className="section-subtitle">Conheça os talentos por trás do BFlash</p>
-          <div className="grid-team">
+          <div className='content-team'>
+            <h2 className="section-title team-title">Nosso Time</h2>
+            <p className="section-subtitle">Conheça os talentos por trás do BFlash</p>
+          </div>
+         
+          <div className="container-team">
             {team.map((person) => (
-              <div className="card" key={person.name}>
+              <div className="team-card" key={person.name}>
                 <div className="avatar-wrapper">
                   <img src={person.img} alt={person.name} className="avatar" />
                 </div>
@@ -74,14 +84,15 @@ function App() {
               </div>
             ))}
           </div>
-        </div>
+      
       </section>
 
       <section className="section tools-section">
-        <div className="section-content">
-          <h2 className="section-title">Tecnologias Utilizadas</h2>
-          <p className="section-subtitle">Ferramentas modernas que construímos nossa aplicação</p>
-          <div className="grid-tool">
+          <div className='content-tools'>
+            <h2 className="section-title">Tecnologias Utilizadas</h2>
+            <p className="section-subtitle">Ferramentas modernas que construímos nossa aplicação</p>
+          </div>
+          <div className="container-tool">
             {tools.map((tool) => (
               <div className="tool-card" key={tool.name}>
                 <div className="tool-wrapper">
@@ -91,13 +102,15 @@ function App() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       <section className="section mascote-section">
-        <div className="section-content">
-          <h2 className="section-title">Nosso mascote</h2>
-          <p className="section-subtitle">Conheça o rostinho simpático que representa nosso projeto</p>
+
+          <div className='content-tools'>
+            <h2 className="section-title">Nosso mascote</h2>
+            <p className="section-subtitle">Conheça o rostinho simpático que representa nosso projeto</p>
+          </div>
+
           <div className="mascote-container">
             <img src={mascote} alt="Mascote BFlash" className="mascote-image" />
             <div className="mascote-description">
@@ -105,7 +118,6 @@ function App() {
               <p>Nosso mascote representa a velocidade e eficiência com que nossa plataforma de transcrição.</p>
             </div>
           </div>
-        </div>
       </section>
 
       <section className="section cta-section">
